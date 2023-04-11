@@ -1,6 +1,8 @@
-﻿Console.WriteLine("======== CALCULATRICE ========");
+﻿using TPCalculatrice;
 
-TPCalculatrice.Calculatrice maCalc = new TPCalculatrice.Calculatrice();
+Console.WriteLine("======== CALCULATRICE ========");
+
+Calculatrice maCalc = new Calculatrice();
 
 Console.WriteLine("Veuillez saisir un premier chiffre : ");
 int a = int.Parse(Console.ReadLine());
