@@ -21,7 +21,12 @@ namespace TPCalculatrice
 
         public int Division(int a, int b)
         {
-            return a / b;
+            int resu = 0;
+            if (b != 0)
+            {
+                resu = a / b;
+            }
+            return resu;
         }
 
         public int Modulo(int a, int b)
