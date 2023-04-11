@@ -4,27 +4,27 @@ namespace TPCalculatrice
 {
     public class Calculatrice
     {
-        public int addition(int a, int b)
+        public int Addition(int a, int b)
         {
             return a + b;
         }
 
-        public int soustraction(int a, int b)
+        public int Soustraction(int a, int b)
         {
             return a - b;
         }
 
-        public int multiplication(int a, int b)
+        public int Multiplication(int a, int b)
         {
             return a * b;
         }
 
-        public int division(int a, int b)
+        public int Division(int a, int b)
         {
             return a / b;
         }
 
-        public int modulo(int a, int b)
+        public int Modulo(int a, int b)
         {
             return a % b;
         }
