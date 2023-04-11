@@ -1,0 +1,15 @@
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/bin/Debug/net7.0/TPCalculatrice
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/bin/Debug/net7.0/TPCalculatrice.deps.json
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/bin/Debug/net7.0/TPCalculatrice.runtimeconfig.json
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/bin/Debug/net7.0/TPCalculatrice.dll
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/bin/Debug/net7.0/TPCalculatrice.pdb
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/TPCalculatrice.csproj.AssemblyReference.cache
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/TPCalculatrice.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/TPCalculatrice.AssemblyInfoInputs.cache
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/TPCalculatrice.AssemblyInfo.cs
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/TPCalculatrice.csproj.CoreCompileInputs.cache
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/TPCalculatrice.dll
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/refint/TPCalculatrice.dll
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/TPCalculatrice.pdb
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/TPCalculatrice.genruntimeconfig.cache
+/Users/ngdev/NGDEV/DotNet/TPCalculatrice/obj/Debug/net7.0/ref/TPCalculatrice.dll
