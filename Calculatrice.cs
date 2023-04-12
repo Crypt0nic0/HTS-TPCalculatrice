@@ -4,10 +4,18 @@ namespace TPCalculatrice
 {
     public class Calculatrice
     {
-
         public int OperanteGauche { get; set; }
         public int OperanteDroite { get; set; }
         public int Resultat { get; set; }
+
+
+        public Calculatrice(int a, int b)
+        {
+            OperanteGauche = a;
+            OperanteDroite = b;
+        }
+
+
 
         public void Addition()
         {

@@ -2,13 +2,13 @@
 
 Console.WriteLine("======== CALCULATRICE ========");
 
-Calculatrice maCalc = new Calculatrice();
-
 Console.WriteLine("Veuillez saisir un premier chiffre : ");
-maCalc.OperanteGauche = int.Parse(Console.ReadLine());
+int a = int.Parse(Console.ReadLine());
 Console.WriteLine("Veuillez saisir un deuxièmre chiffre : ");
-maCalc.OperanteDroite = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
 Console.WriteLine();
+
+Calculatrice maCalc = new Calculatrice(a, b);
 
 Console.WriteLine("Saisir un opérateur entre + - * / % : ");
 string op = Console.ReadLine();
