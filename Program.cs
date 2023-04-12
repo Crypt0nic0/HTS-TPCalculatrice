@@ -1,16 +1,34 @@
 ﻿using TPCalculatrice;
 using TPCalculatrice.Operations;
 
+int GetIntValue(int nb)
+{
+    Console.WriteLine($"Saisissez la valeur {nb}e entière");
+    string? saisie = Console.ReadLine();
+    int resultat = 0;
+    if (saisie is not null)
+    {
+        try
+        {
+            resultat = int.Parse(saisie);
+        }
+        catch
+        {
+            resultat = 0;
+        }
+    }
+    return resultat;
+}
+
 Console.WriteLine("======== CALCULATRICE ========");
 
-Console.WriteLine("Veuillez saisir un premier chiffre : ");
-int a = int.Parse(Console.ReadLine());
-Console.WriteLine("Veuillez saisir un deuxièmre chiffre : ");
-int b = int.Parse(Console.ReadLine());
+int a = GetIntValue(1);
+int b = GetIntValue(2);
+
 Console.WriteLine();
 
 Console.WriteLine("Saisir un opérateur entre + - * / % : ");
-string op = Console.ReadLine();
+string? op = Console.ReadLine();
 Operation operation;
 
 switch (op)
