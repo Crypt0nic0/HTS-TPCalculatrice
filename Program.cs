@@ -3,21 +3,24 @@ using TPCalculatrice.Operations;
 
 int GetIntValue(int nb)
 {
-    Console.WriteLine($"Saisissez la valeur {nb}e entière");
-    string? saisie = Console.ReadLine();
-    int resultat = 0;
-    if (saisie is not null)
+    int? resultat = null;
+    while (resultat is null)
     {
-        try
+        Console.WriteLine($"Saisissez la valeur {nb}e entière");
+        string? saisie = Console.ReadLine();
+        if (saisie is not null)
         {
-            resultat = int.Parse(saisie);
-        }
-        catch
-        {
-            resultat = 0;
+            try
+            {
+                resultat = int.Parse(saisie);
+            }
+            catch
+            {
+                resultat = null;
+            }
         }
     }
-    return resultat;
+    return resultat.Value;
 }
 
 Console.WriteLine("======== CALCULATRICE ========");
