@@ -20,5 +20,23 @@ namespace TPCalculatrice.Operations
         {
             return $"{base.OperanteGauche} + {base.OperanteDroite}";
         }
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is null)
+            {
+                return false;
+            }
+
+            bool res = false;
+            if (obj is Addition add)
+            {
+                if (OperanteGauche == add.OperanteGauche && OperanteDroite == add.OperanteDroite)
+                {
+                    res = true;
+                }
+            }
+            return res;
+        }
     }
 }

@@ -39,6 +39,8 @@ switch (op)
     case "+":
         operation = new Addition(a, b);
         Console.WriteLine("Voici le calcul demandé : " + operation.ToString());
+        Addition a2 = new Addition(a, b);
+        Console.WriteLine(operation.Equals(a2));
         break;
     case "-":
         operation = new Soustraction(a, b);
