@@ -1,12 +1,12 @@
 ﻿using TPCalculatrice;
 using TPCalculatrice.Operations;
 
-int GetIntValue(int nb)
+int GetIntValue(string valeur)
 {
     int? resultat = null;
     while (resultat is null)
     {
-        Console.WriteLine($"Saisissez la valeur {nb}e entière");
+        Console.WriteLine($"Saisissez la {valeur} valeur entière");
         string? saisie = Console.ReadLine();
         if (saisie is not null)
         {
@@ -25,8 +25,8 @@ int GetIntValue(int nb)
 
 Console.WriteLine("======== CALCULATRICE ========");
 
-int a = GetIntValue(1);
-int b = GetIntValue(2);
+int a = GetIntValue("première");
+int b = GetIntValue("deuxième");
 
 Console.WriteLine();
 
