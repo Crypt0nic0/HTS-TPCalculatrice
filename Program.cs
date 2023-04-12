@@ -32,7 +32,7 @@ Console.WriteLine();
 
 Console.WriteLine("Saisir un opérateur entre + - * / % : ");
 string? op = Console.ReadLine();
-Operation operation;
+Operation? operation;
 
 switch (op)
 {
@@ -56,11 +56,16 @@ switch (op)
         break;
     default:
         Console.WriteLine("Opérateur incorrect");
-        operation = new Addition(a, b);
+        operation = null;
         break;
 }
-
-Calculatrice calc = new Calculatrice(operation);
-calc.Executer();
-
-Console.WriteLine($"Résultat : {calc.Operation.Resultat}");
+if (operation is not null)
+{
+    Calculatrice calc = new Calculatrice(operation);
+    calc.Executer();
+    Console.WriteLine($"Résultat : {calc.Operation.Resultat}");
+}
+else
+{
+    Console.WriteLine($"{op} non reconnu");
+}
