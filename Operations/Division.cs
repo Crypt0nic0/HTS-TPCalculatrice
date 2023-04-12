@@ -9,7 +9,10 @@ namespace TPCalculatrice.Operations
 
         public void Executer()
         {
-            Resultat = OperanteGauche / OperanteDroite;
+            if (OperanteDroite != 0)
+            {
+                Resultat = OperanteGauche / OperanteDroite;
+            }
         }
     }
 }
