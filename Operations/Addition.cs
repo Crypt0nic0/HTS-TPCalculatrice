@@ -15,5 +15,10 @@ namespace TPCalculatrice.Operations
         {
             Resultat = OperanteGauche + OperanteDroite;
         }
+
+        public override string ToString()
+        {
+            return $"{base.OperanteGauche} + {base.OperanteDroite}";
+        }
     }
 }
