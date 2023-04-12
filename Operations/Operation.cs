@@ -6,10 +6,10 @@ namespace TPCalculatrice.Operations
     {
         // Une Operation a besoin de 2 operante
         // Elle fournira un Resultat
-        public int OperanteGauche { get; set; }
-        public int OperanteDroite { get; set; }
+        protected int OperanteGauche { get; }
+        protected int OperanteDroite { get; }
 
-        public int Resultat { get; set; }
+        public int Resultat { get; protected set; }
 
 
         // Pour instancier une Operation...
