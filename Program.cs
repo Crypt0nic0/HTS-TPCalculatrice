@@ -32,51 +32,50 @@ Console.WriteLine();
 
 Console.WriteLine("Saisir un opérateur entre + - * / % : ");
 string? op = Console.ReadLine();
-Operation? operation = op switch
+
+try
 {
-    "+" => new Addition(a, b),
-    "-" => new Soustraction(a, b),
-    "*" => new Multiplication(a, b),
-    "/" => new Division(a, b),
-    "%" => new Modulo(a, b),
-    _ => null
-};
+    Operation operation = op switch
+    {
+        "+" => new Addition(a, b),
+        "-" => new Soustraction(a, b),
+        "*" => new Multiplication(a, b),
+        "/" => new Division(a, b),
+        "%" => new Modulo(a, b),
+        _ => throw new OperateurNonReconnuException()
+    };
 
-// switch (op)
-// {
-//     case "+":
-//         operation = new Addition(a, b);
-//         Console.WriteLine("Voici le calcul demandé : " + operation.ToString());
-//         Addition a2 = new Addition(a, b);
-//         Console.WriteLine(operation.Equals(a2));
-//         break;
-//     case "-":
-//         operation = new Soustraction(a, b);
-//         break;
-//     case "*":
-//         operation = new Multiplication(a, b);
-//         break;
-//     case "/":
-//         operation = new Division(a, b);
-//         break;
-//     case "%":
-//         operation = new Modulo(a, b);
-//         break;
-//     default:
-//         Console.WriteLine("Opérateur incorrect");
-//         operation = null;
-//         break;
-// }
+    // switch (op)
+    // {
+    //     case "+":
+    //         operation = new Addition(a, b);
+    //         Console.WriteLine("Voici le calcul demandé : " + operation.ToString());
+    //         Addition a2 = new Addition(a, b);
+    //         Console.WriteLine(operation.Equals(a2));
+    //         break;
+    //     case "-":
+    //         operation = new Soustraction(a, b);
+    //         break;
+    //     case "*":
+    //         operation = new Multiplication(a, b);
+    //         break;
+    //     case "/":
+    //         operation = new Division(a, b);
+    //         break;
+    //     case "%":
+    //         operation = new Modulo(a, b);
+    //         break;
+    //     default:
+    //         Console.WriteLine("Opérateur incorrect");
+    //         operation = null;
+    //         break;
+    // }
 
-
-
-if (operation is not null)
-{
     Calculatrice calc = new Calculatrice(operation);
     calc.Executer();
     Console.WriteLine($"Résultat : {calc.Operation.Resultat}");
 }
-else
+catch
 {
     Console.WriteLine($"{op} non reconnu");
 }
