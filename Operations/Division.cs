@@ -7,7 +7,7 @@ namespace TPCalculatrice.Operations
         public Division(int o1, int o2)
         : base(o1, o2) { }
 
-        public void Executer()
+        public override void Executer()
         {
             if (OperanteDroite != 0)
             {

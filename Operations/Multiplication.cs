@@ -10,7 +10,7 @@ namespace TPCalculatrice.Operations
 
         }
 
-        public void Executer()
+        public override void Executer()
         {
             Resultat = OperanteGauche * OperanteDroite;
         }

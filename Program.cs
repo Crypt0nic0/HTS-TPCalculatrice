@@ -1,4 +1,5 @@
 ﻿using TPCalculatrice;
+using TPCalculatrice.Operations;
 
 Console.WriteLine("======== CALCULATRICE ========");
 
@@ -8,31 +9,34 @@ Console.WriteLine("Veuillez saisir un deuxièmre chiffre : ");
 int b = int.Parse(Console.ReadLine());
 Console.WriteLine();
 
-Calculatrice maCalc = new Calculatrice(a, b);
-
 Console.WriteLine("Saisir un opérateur entre + - * / % : ");
 string op = Console.ReadLine();
+Operation operation;
 
 switch (op)
 {
     case "+":
-        maCalc.Addition();
+        operation = new Addition(a, b);
         break;
     case "-":
-        maCalc.Soustraction();
+        operation = new Soustraction(a, b);
         break;
     case "*":
-        maCalc.Multiplication();
+        operation = new Multiplication(a, b);
         break;
     case "/":
-        maCalc.Division();
+        operation = new Division(a, b);
         break;
     case "%":
-        maCalc.Modulo();
+        operation = new Modulo(a, b);
         break;
     default:
         Console.WriteLine("Opérateur incorrect");
+        operation = new Addition(a, b);
         break;
 }
 
-Console.WriteLine($"Résultat : {maCalc.Resultat}");
+Calculatrice calc = new Calculatrice(operation);
+calc.Executer();
+
+Console.WriteLine($"Résultat : {calc.Operation.Resultat}");

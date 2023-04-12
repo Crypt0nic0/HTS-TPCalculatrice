@@ -2,7 +2,7 @@ using System;
 
 namespace TPCalculatrice.Operations
 {
-    public class Operation
+    public abstract class Operation
     {
         public int OperanteGauche { get; set; }
         public int OperanteDroite { get; set; }
@@ -14,6 +14,8 @@ namespace TPCalculatrice.Operations
             OperanteGauche = operanteGauche;
             OperanteDroite = operanteDroite;
         }
+
+        public abstract void Executer();
 
     }
 }
